@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Modal from 'react-modal';
 import Searchbar from "./Searchbar/Searchbar";
 import ImageGallery from "./ImageGallery/ImageGallery";
 import Loader from "./Loader/Loader";
@@ -30,17 +29,23 @@ export class App extends Component {
 
   componentDidUpdate = (prevProps, prevState) => {
     if(prevState.queue !== this.state.queue){
-      this.state.loading = true;
+      
       fetchImages(this.state.queue, this.state.page)
       .then(res =>{
         this.setState(prevState => {
           return {
             ...prevState,
+            loading : true,
             images : res 
           }
         })
     })
-    this.state.loading = false;
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        loading : false
+      }
+    })
 
     }
   }
