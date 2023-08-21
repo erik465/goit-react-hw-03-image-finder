@@ -1,8 +1,9 @@
 import React from 'react'
+import { StyledButton } from './Button.styled'
 
 const Button = ({loadMore}) => {
   return (
-    <button onClick={loadMore}>Load more</button>
+    <StyledButton onClick={loadMore}>Load more</StyledButton>
   )
 }
 
