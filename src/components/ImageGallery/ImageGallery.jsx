@@ -3,6 +3,8 @@ import { StyledGallery } from './ImageGallery.styled'
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem'
 
 
+
+
 const ImageGallery = ({images}) => {
   return (
     <StyledGallery className="gallery">

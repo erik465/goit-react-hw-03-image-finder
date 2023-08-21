@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({increasePage}) => {
+const Button = ({loadMore}) => {
   return (
-    <button onClick={increasePage}>Load more</button>
+    <button onClick={loadMore}>Load more</button>
   )
 }
 
