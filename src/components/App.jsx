@@ -54,11 +54,10 @@ export class App extends Component {
       })
     });
     
-
+    throw new Error('Done')
     }
 
     if(prevState.page !== this.state.page){
-      console.warn(`Page ${this.state.page}`)
       fetchImages(this.state.queue, this.state.page)
       .then(res =>{
         this.setState(prevState => {
@@ -69,6 +68,7 @@ export class App extends Component {
         })
       })
     
+    throw new Error('Done')
     }
   }
 
