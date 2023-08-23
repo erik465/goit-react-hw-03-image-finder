@@ -74,7 +74,7 @@ export class App extends Component {
       <>
         <Searchbar changeQueue={this.changeQueue}/>
         {this.state.loading ? <Loader/> : <ImageGallery images={this.state.images}/>}
-        {this.state.images.length !== 0 ? <Button loadMore={this.handleLoadMore}/> : null}
+        {this.state.images.length === 12 ? <Button loadMore={this.handleLoadMore}/> : null}
       </>
     );
   }
